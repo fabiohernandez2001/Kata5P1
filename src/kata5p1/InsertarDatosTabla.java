@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package kata5p1;
 
 import java.sql.Connection;
@@ -10,13 +6,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- *
- * @author Entrar
- */
+
 public class InsertarDatosTabla {
    private Connection connect() {
-    // Cadena de conexión SQLite
         String url = "jdbc:sqlite:kata5.db";
         Connection conn = null;
         try {
@@ -26,7 +18,6 @@ public class InsertarDatosTabla {
         }
         return conn;
     }
-// Método para insertar datos en la tabla direcc_email
     public void insert(String email) {
         String sql = "INSERT INTO EMAIL(Mail) VALUES(?)";
         try (Connection conn = this.connect();
